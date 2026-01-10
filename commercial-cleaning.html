@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Window Cleaning | FAB Window Cleaning Services North Yorkshire</title>
+    <meta name="description" content="Professional commercial window cleaning for businesses in North Yorkshire. Shop fronts, office buildings, retail units. Call 07802 494062 for commercial cleaning quotes.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
+            --secondary-green: #10b981;
+            --accent-yellow: #f59e0b;
+            --dark: #1f2937;
+            --gray-dark: #4b5563;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --light: #f9fafb;
+            --white: #ffffff;
+            
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== BASE STYLES ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gray-dark);
+            border: 2px solid var(--gray-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gray-light);
+            border-color: var(--gray);
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 1.125rem;
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.875rem;
+        }
+
+        /* ===== HEADER ===== */
+        .main-header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 8px 0;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--gray-dark);
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== COMMERCIAL WINDOW CLEANING HERO ===== */
+        .commercial-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 60px;
+            color: var(--white);
+        }
+
+        .commercial-hero-content {
+            max-width: 800px;
+        }
+
+        .commercial-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .commercial-hero h1 span {
+            color: #60a5fa;
+        }
+
+        .commercial-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            background: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .benefit-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* ===== BEFORE/AFTER SECTION ===== */
+        .before-after {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .image-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            margin: 40px 0;
+            user-select: none;
+        }
+
+        .image-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        .slider-before {
+            z-index: 1;
+        }
+
+        .slider-after {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 6;
+            letter-spacing: 0.5px;
+        }
+
+        .label-before {
+            left: 20px;
+        }
+
+        .label-after {
+            right: 20px;
+        }
+
+        .divider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: white;
+            z-index: 4;
+            pointer-events: none;
+            transform: translateX(-1px);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border: 2px solid #222;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 7;
+            cursor: ew-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            user-select: none;
+        }
+
+        .slider-handle svg {
+            width: 18px;
+            height: 18px;
+            fill: #222;
+        }
+
+        .slider-handle .arrow-left {
+            transform: translateX(-3px);
+        }
+
+        .slider-handle .arrow-right {
+            transform: translateX(3px);
+        }
+
+        /* ===== PROCESS ===== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== INDUSTRIES SECTION ===== */
+        .industries {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .industry-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .industry-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .industry-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* ===== AREAS SECTION ===== */
+        .areas {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        .btn-white:hover {
+            background: var(--gray-light);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--dark);
+            color: var(--gray-light);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE STYLES ===== */
+        @media (max-width: 992px) {
+            .main-nav,
+            .header-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .commercial-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .logo-img {
+                height: 70px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .commercial-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-img {
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
+            }
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            display: none;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav a {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover,
+        .mobile-nav a.active {
+            background: var(--light);
+            color: var(--primary-blue);
+        }
+
+        .mobile-cta {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo with Image Only -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767959000146-M6J87VNO81PGYWQBIFDL/Screenshot_2025-08-12_135134-removebg-preview.png?format=1500w" 
+                             alt="FAB Window Cleaning - Professional Commercial Window Cleaning Services in North Yorkshire" 
+                             class="logo-img"
+                             title="FAB Window Cleaning">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="window-cleaning.html" class="nav-link">Residential</a>
+                    <a href="commercial-window-cleaning.html" class="nav-link active">Commercial</a>
+                    <a href="gutter-cleaning.html" class="nav-link">Gutter Cleaning</a>
+                    <a href="soffit-cleaning.html" class="nav-link">Soffit Cleaning</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="header-cta">
+                    <a href="tel:+447802494062" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>07802 494062</span>
+                    </a>
+                    <a href="#contact" class="btn btn-primary">Get Business Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="window-cleaning.html">Residential</a>
+                <a href="commercial-window-cleaning.html" class="active">Commercial</a>
+                <a href="gutter-cleaning.html">Gutter Cleaning</a>
+                <a href="soffit-cleaning.html">Soffit Cleaning</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="mobile-cta">
+                <a href="tel:+447802494062" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:10px;">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#contact" class="btn btn-secondary" style="display:block;text-align:center;">
+                    Get Business Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Commercial Window Cleaning Hero -->
+    <section class="commercial-hero">
+        <div class="container">
+            <div class="commercial-hero-content">
+                <h1>Professional <span>Commercial Window Cleaning</span> in North Yorkshire</h1>
+                <p>Keep your business looking its best with our professional commercial window cleaning services. From shop fronts to office blocks, we deliver streak-free results that impress customers and clients.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+447802494062" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i> Call for Business Quote: 07802 494062
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-envelope"></i> Email Business Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Commercial Window Cleaning -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Commercial Window Cleaning</h2>
+                <p class="section-subtitle">Enhance your business image with crystal-clear windows</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                    <div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 15px;">First Impressions Matter</h3>
+                        <p style="color: var(--gray-dark); line-height: 1.8;">
+                            Clean windows create a positive impression for customers, clients, and employees. Our commercial cleaning services ensure your business always looks professional and well-maintained.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 15px;">Flexible Scheduling</h3>
+                        <p style="color: var(--gray-dark); line-height: 1.8;">
+                            We work around your business hours with early morning, evening, or weekend appointments available. Minimal disruption to your daily operations.
+                        </p>
+                    </div>
+                </div>
+                <div style="background: var(--light); padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary-blue);">
+                    <p style="color: var(--dark); font-size: 1.125rem; font-style: italic; margin: 0;">
+                        "Andrew has been cleaning our retail unit windows for the past 18 months. His attention to detail is exceptional and he always works around our opening hours. Our shop front looks fantastic and gets noticed by customers." <br>
+                        <span style="font-weight: 600; display: block; margin-top: 10px;">- James Miller, Northallerton Retail Park</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="content-section benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Benefits for Your Business</h2>
+                <p class="section-subtitle">Why professional commercial cleaning makes business sense</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Enhanced Curb Appeal</h3>
+                    <p>Clean windows dramatically improve your business's appearance, attracting more customers and creating a positive brand image.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Natural Light</h3>
+                    <p>Clean windows allow maximum natural light into your premises, creating a better working environment and potentially reducing energy costs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Regular Maintenance</h3>
+                    <p>Prevent long-term damage from dirt and pollution with regular cleaning schedules tailored to your business needs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Professional Equipment</h3>
+                    <p>We use commercial-grade equipment including water-fed poles for multi-storey buildings and hard-to-reach windows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="content-section industries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">Professional cleaning services for all types of commercial properties</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Retail & Shops</h3>
+                    <p>Shop fronts, display windows, and entrance doors. Keep your retail space inviting and attractive to customers.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Office Buildings</h3>
+                    <p>Ground floor to multi-storey office blocks. Improve working environment and professional appearance.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Industrial Units</h3>
+                    <p>Factory windows, warehouse glazing, and industrial premises. Specialised cleaning for commercial properties.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Hospitality</h3>
+                    <p>Hotels, restaurants, pubs, and cafes. First impressions are everything in the hospitality industry.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Education & Public</h3>
+                    <p>Schools, colleges, libraries, and public buildings. Safe, reliable cleaning for educational institutions.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Blocks</h3>
+                    <p>Apartment buildings, housing associations, and managed residential properties. Common area cleaning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Commercial Cleaning Results</h2>
+                <p class="section-subtitle">See the difference professional commercial cleaning makes to business premises</p>
+            </div>
+
+            <div class="image-slider" id="slider">
+                <img class="slider-before"
+                    src="https://scontent-lhr8-1.xx.fbcdn.net/v/t51.75761-15/500717518_17843942868494219_7811708397920927396_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tO0V5EWhqWoQ7kNvwHFxe85&_nc_oc=Adn2kk7jiWQ4iHWKt1HVi0NtiIev30uPJ0b1irYdsTbq1tSBH4i4Vv-PW-75TomwjBCJp0S2hk3SYaXBw1tZwEDv&_nc_zt=23&_nc_ht=scontent-lhr8-1.xx&_nc_gid=a5PIq07-QU63AEKObIXhfw&oh=00_AfrNdMeuDSmxdh9l3FenIUTn_3zh5k1P_nCR_TxJJBHqFQ&oe=69686B0B"
+                    alt="Before commercial window cleaning">
+                <img class="slider-after"
+                    src="https://scontent-lhr6-1.xx.fbcdn.net/v/t51.75761-15/500915604_17843942886494219_5487333137843445727_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xxFizL3GbFkQ7kNvwHxdaJb&_nc_oc=AdmVHwOFLf3jd2M5SU_LIWsCwh4o_7jjYKeuugRu6VEXHOtc5UAfK82Ww97bXFZxqGvkAb63Dd-4utX0G8Jz8dCr&_nc_zt=23&_nc_ht=scontent-lhr6-1.xx&_nc_gid=H8wkLXG9I0Cm_W6tgNVN8A&oh=00_AfqjxELtv1cbBrfBbmy79DJI2W4XqN3llUingAXAoPJ-1A&oe=69687FA2"
+                    alt="After commercial window cleaning">
+
+                <div class="slider-label label-before">Before</div>
+                <div class="slider-label label-after">After</div>
+
+                <div class="divider-line"></div>
+
+                <div class="slider-handle" id="sliderHandle">
+                    <svg class="arrow-left" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                    <svg class="arrow-right" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Commercial Process -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Commercial Cleaning Process</h2>
+                <p class="section-subtitle">Efficient, professional service tailored to your business needs</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Business Assessment</h3>
+                    <p>We evaluate your premises, discuss your requirements, and create a customised cleaning plan that fits your schedule.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>We work around your business hours - early mornings, evenings, or weekends to minimise disruption to your operations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Professional Cleaning</h3>
+                    <p>Using commercial-grade equipment and techniques to achieve streak-free results on all window types and sizes.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Regular Maintenance</h3>
+                    <p>We establish a regular cleaning schedule to keep your business looking its best year-round.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose FAB for Commercial Cleaning?</h2>
+                <p class="section-subtitle">Professional service designed for businesses</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-clock fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Flexible Hours</h3>
+                        <p style="color: var(--gray);">We work around your business schedule with early morning, evening, and weekend appointments available.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-file-contract fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Contract Options</h3>
+                        <p style="color: var(--gray);">Flexible contract terms from one-off cleans to regular maintenance schedules with discounted rates.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-shield-alt fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Fully Insured</h3>
+                        <p style="color: var(--gray);">Comprehensive commercial insurance coverage for complete peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section class="areas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Commercial Areas We Serve</h2>
+                <p class="section-subtitle">Professional commercial window cleaning across North Yorkshire business districts</p>
+            </div>
+
+            <div class="areas-list">
+                <div class="area-item">Thirsk Business Park</div>
+                <div class="area-item">Northallerton Town Centre</div>
+                <div class="area-item">York Business District</div>
+                <div class="area-item">Harrogate Commercial</div>
+                <div class="area-item">Easingwold Retail</div>
+                <div class="area-item">Boroughbridge Industrial</div>
+                <div class="area-item">Ripon Commercial</div>
+                <div class="area-item">Knaresborough Business</div>
+            </div>
+
+            <div style="text-align: center;">
+                <p style="margin-bottom: 20px; color: var(--gray-dark);">
+                    Serving commercial properties throughout North Yorkshire
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Get Commercial Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Enhance Your Business Image?</h2>
+                <p>Contact Andrew today for a free commercial window cleaning quote. We'll assess your business premises and provide a competitive quote with flexible scheduling options.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+447802494062" class="btn btn-white btn-lg">
+                        <i class="fas fa-phone"></i> Call for Business Quote: 07802 494062
+                    </a>
+                    <a href="mailto:andrew@fabwindowcleaning.co.uk?subject=Commercial%20Window%20Cleaning%20Quote" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-envelope"></i> Email Business Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span>FAB Window Cleaning</span>
+                    </div>
+                    <p>
+                        Professional commercial window cleaning services by Andrew Ball. Serving businesses across North Yorkshire since 2018.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/FABWINDOWCLEANINGSERVICES" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="tel:+447802494062" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:andrew@fabwindowcleaning.co.uk" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="window-cleaning.html">Residential Cleaning</a></li>
+                        <li><a href="commercial-window-cleaning.html">Commercial Cleaning</a></li>
+                        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
+                        <li><a href="soffit-cleaning.html">Soffit Cleaning</a></li>
+                        <li><a href="#contact">Shop Front Cleaning</a></li>
+                        <li><a href="#contact">Office Building Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Commercial Areas -->
+                <div class="footer-column">
+                    <h3>Commercial Areas</h3>
+                    <ul>
+                        <li>Thirsk Business Parks</li>
+                        <li>Northallerton Town Centre</li>
+                        <li>York Commercial District</li>
+                        <li>Harrogate Business Area</li>
+                        <li>Retail Parks</li>
+                        <li>Industrial Estates</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3>Business Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+447802494062">07802 494062</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:andrew@fabwindowcleaning.co.uk">andrew@fabwindowcleaning.co.uk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Serving North Yorkshire Businesses</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 6am-8pm (Flexible)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> FAB Window Cleaning Services. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Commercial Terms</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            // Animate hamburger to X
+            const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+            if (mobileMenu.classList.contains('active')) {
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Before/After Slider Script
+        window.addEventListener("load", function () {
+            const container = document.getElementById("slider");
+            const afterImg = container.querySelector(".slider-after");
+            const handle = document.getElementById("sliderHandle");
+            const dividerLine = container.querySelector(".divider-line");
+
+            function updateSlider(x) {
+                const rect = container.getBoundingClientRect();
+                let offset = x - rect.left;
+                offset = Math.max(0, Math.min(offset, rect.width));
+                const percent = (offset / rect.width) * 100;
+                afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+                dividerLine.style.left = `${percent}%`;
+            }
+
+            let dragging = false;
+
+            const startDrag = (e) => {
+                dragging = true;
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+                updateSlider(x);
+                e.preventDefault();
+            };
+
+            const stopDrag = () => { dragging = false; };
+            const onDrag = (e) => { 
+                if (!dragging) return; 
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX; 
+                updateSlider(x); 
+            };
+
+            handle.addEventListener("mousedown", startDrag);
+            handle.addEventListener("touchstart", startDrag, { passive: false });
+            window.addEventListener("mousemove", onDrag);
+            window.addEventListener("touchmove", onDrag, { passive: false });
+            window.addEventListener("mouseup", stopDrag);
+            window.addEventListener("touchend", stopDrag);
+
+            // Force true center after layout fully loads
+            const rect = container.getBoundingClientRect();
+            updateSlider(rect.left + rect.width / 2);
+        });
+    </script>
+</body>
+</html>
