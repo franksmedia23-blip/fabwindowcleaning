@@ -25,6 +25,7 @@
             --primary-blue: #3b82f6;
             --primary-dark: #1d4ed8;
             --primary-light: #60a5fa;
+            --secondary-green: #10b981;
             --accent-yellow: #f59e0b;
             --dark: #1f2937;
             --gray-dark: #4b5563;
@@ -86,7 +87,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 32px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
@@ -120,9 +121,25 @@
             color: var(--white);
         }
 
+        .btn-outline {
+            background: transparent;
+            color: var(--gray-dark);
+            border: 2px solid var(--gray-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gray-light);
+            border-color: var(--gray);
+        }
+
         .btn-lg {
-            padding: 16px 40px;
+            padding: 16px 32px;
             font-size: 1.125rem;
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.875rem;
         }
 
         /* ===== HEADER ===== */
@@ -134,7 +151,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 16px 0;
+            padding: 8px 0;
         }
 
         .header-wrapper {
@@ -146,18 +163,12 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
         }
 
-        .logo-text {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        .logo-highlight {
-            color: var(--primary-blue);
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
         }
 
         .main-nav {
@@ -230,7 +241,7 @@
         /* ===== WINDOW CLEANING HERO ===== */
         .window-hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1581579431531-5c5ee73723d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+                        url('https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767958996652-HCXVK43OBQNM8ZSJBKM5/481133781_948171087400449_7035353060468573789_n.jpg?format=2500w') center/cover no-repeat;
             min-height: 70vh;
             display: flex;
             align-items: center;
@@ -327,6 +338,112 @@
             color: var(--white);
         }
 
+        /* ===== BEFORE/AFTER SECTION ===== */
+        .before-after {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .image-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            margin: 40px 0;
+            user-select: none;
+        }
+
+        .image-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        .slider-before {
+            z-index: 1;
+        }
+
+        .slider-after {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 6;
+            letter-spacing: 0.5px;
+        }
+
+        .label-after {
+            left: 20px;
+        }
+
+        .label-before {
+            right: 20px;
+        }
+
+        .divider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: white;
+            z-index: 4;
+            pointer-events: none;
+            transform: translateX(-1px);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border: 2px solid #222;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 7;
+            cursor: ew-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            user-select: none;
+        }
+
+        .slider-handle svg {
+            width: 18px;
+            height: 18px;
+            fill: #222;
+        }
+
+        .slider-handle .arrow-left {
+            transform: translateX(-3px);
+        }
+
+        .slider-handle .arrow-right {
+            transform: translateX(3px);
+        }
+
         /* ===== PROCESS ===== */
         .process-steps {
             display: grid;
@@ -352,6 +469,36 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin: 0 auto 20px;
+        }
+
+        /* ===== AREAS SECTION ===== */
+        .areas {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
         }
 
         /* ===== CTA SECTION ===== */
@@ -534,6 +681,10 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .logo-img {
+                height: 70px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -551,6 +702,16 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .logo-img {
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
             }
         }
 
@@ -604,21 +765,22 @@
     <header class="main-header">
         <div class="container">
             <div class="header-wrapper">
-                <!-- Logo -->
+                <!-- Logo with Image Only -->
                 <div class="logo">
-                    <a href="/" style="text-decoration: none; color: inherit;">
-                        <div class="logo-text">
-                            <span class="logo-highlight">FAB</span> Window Cleaning
-                        </div>
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767959000146-M6J87VNO81PGYWQBIFDL/Screenshot_2025-08-12_135134-removebg-preview.png?format=1500w" 
+                             alt="FAB Window Cleaning - Professional Window Cleaning Services in North Yorkshire" 
+                             class="logo-img"
+                             title="FAB Window Cleaning">
                     </a>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="main-nav">
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/window-cleaning" class="nav-link active">Window Cleaning</a>
-                    <a href="/gutter-cleaning" class="nav-link">Gutter Cleaning</a>
-                    <a href="/soffit-cleaning" class="nav-link">Soffit Cleaning</a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="window-cleaning.html" class="nav-link active">Window Cleaning</a>
+                    <a href="gutter-cleaning.html" class="nav-link">Gutter Cleaning</a>
+                    <a href="soffit-cleaning.html" class="nav-link">Soffit Cleaning</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
 
@@ -643,10 +805,10 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu">
             <nav class="mobile-nav">
-                <a href="/">Home</a>
-                <a href="/window-cleaning" class="active">Window Cleaning</a>
-                <a href="/gutter-cleaning">Gutter Cleaning</a>
-                <a href="/soffit-cleaning">Soffit Cleaning</a>
+                <a href="index.html">Home</a>
+                <a href="window-cleaning.html" class="active">Window Cleaning</a>
+                <a href="gutter-cleaning.html">Gutter Cleaning</a>
+                <a href="soffit-cleaning.html">Soffit Cleaning</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="mobile-cta">
@@ -750,6 +912,39 @@
         </div>
     </section>
 
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See the Transformation</h2>
+                <p class="section-subtitle">Drag the slider to see before and after results of our professional window cleaning</p>
+            </div>
+
+            <div class="image-slider" id="slider">
+                <img class="slider-before"
+                    src="https://scontent-lhr8-1.xx.fbcdn.net/v/t51.75761-15/500717518_17843942868494219_7811708397920927396_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tO0V5EWhqWoQ7kNvwHFxe85&_nc_oc=Adn2kk7jiWQ4iHWKt1HVi0NtiIev30uPJ0b1irYdsTbq1tSBH4i4Vv-PW-75TomwjBCJp0S2hk3SYaXBw1tZwEDv&_nc_zt=23&_nc_ht=scontent-lhr8-1.xx&_nc_gid=a5PIq07-QU63AEKObIXhfw&oh=00_AfrNdMeuDSmxdh9l3FenIUTn_3zh5k1P_nCR_TxJJBHqFQ&oe=69686B0B"
+                    alt="Before window cleaning">
+                <img class="slider-after"
+                    src="https://scontent-lhr6-1.xx.fbcdn.net/v/t51.75761-15/500915604_17843942886494219_5487333137843445727_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xxFizL3GbFkQ7kNvwHxdaJb&_nc_oc=AdmVHwOFLf3jd2M5SU_LIWsCwh4o_7jjYKeuugRu6VEXHOtc5UAfK82Ww97bXFZxqGvkAb63Dd-4utX0G8Jz8dCr&_nc_zt=23&_nc_ht=scontent-lhr6-1.xx&_nc_gid=H8wkLXG9I0Cm_W6tgNVN8A&oh=00_AfqjxELtv1cbBrfBbmy79DJI2W4XqN3llUingAXAoPJ-1A&oe=69687FA2"
+                    alt="After window cleaning">
+
+                <div class="slider-label label-before">Before</div>
+                <div class="slider-label label-after">After</div>
+
+                <div class="divider-line"></div>
+
+                <div class="slider-handle" id="sliderHandle">
+                    <svg class="arrow-left" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                    <svg class="arrow-right" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Our Process -->
     <section class="content-section">
         <div class="container">
@@ -817,32 +1012,32 @@
         </div>
     </section>
 
-    <!-- Service Areas -->
-    <section class="content-section">
+    <!-- Areas Section -->
+    <section class="areas">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Service Areas</h2>
-                <p class="section-subtitle">Serving homes and businesses across North Yorkshire</p>
+                <h2 class="section-title">Areas We Serve</h2>
+                <p class="section-subtitle">Professional window cleaning services across North Yorkshire</p>
             </div>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
-                    <div style="padding: 20px; border: 1px solid var(--gray-light); border-radius: 8px;">
-                        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Thirsk & Villages</h3>
-                        <p style="color: var(--gray);">Regular residential and commercial service</p>
-                    </div>
-                    <div style="padding: 20px; border: 1px solid var(--gray-light); border-radius: 8px;">
-                        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Northallerton</h3>
-                        <p style="color: var(--gray);">Shop fronts and office windows</p>
-                    </div>
-                    <div style="padding: 20px; border: 1px solid var(--gray-light); border-radius: 8px;">
-                        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Easingwold</h3>
-                        <p style="color: var(--gray);">Residential and conservatory cleaning</p>
-                    </div>
-                    <div style="padding: 20px; border: 1px solid var(--gray-light); border-radius: 8px;">
-                        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Surrounding Areas</h3>
-                        <p style="color: var(--gray);">Harrogate, York, and nearby villages</p>
-                    </div>
-                </div>
+
+            <div class="areas-list">
+                <div class="area-item">Thirsk</div>
+                <div class="area-item">Northallerton</div>
+                <div class="area-item">York</div>
+                <div class="area-item">Harrogate</div>
+                <div class="area-item">Easingwold</div>
+                <div class="area-item">Boroughbridge</div>
+                <div class="area-item">Ripon</div>
+                <div class="area-item">Knaresborough</div>
+            </div>
+
+            <div style="text-align: center;">
+                <p style="margin-bottom: 20px; color: var(--gray-dark);">
+                    Plus all surrounding villages and towns
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Check Your Area
+                </a>
             </div>
         </div>
     </section>
@@ -894,9 +1089,9 @@
                 <div class="footer-column">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="/window-cleaning">Window Cleaning</a></li>
-                        <li><a href="/gutter-cleaning">Gutter Cleaning</a></li>
-                        <li><a href="/soffit-cleaning">Soffit Cleaning</a></li>
+                        <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
+                        <li><a href="soffit-cleaning.html">Soffit Cleaning</a></li>
                         <li><a href="#contact">Conservatory Cleaning</a></li>
                         <li><a href="#contact">Commercial Cleaning</a></li>
                     </ul>
@@ -980,6 +1175,17 @@
             }
         });
 
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            });
+        });
+
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
@@ -999,6 +1205,51 @@
                     });
                 }
             });
+        });
+
+        // Before/After Slider Script
+        window.addEventListener("load", function () {
+            const container = document.getElementById("slider");
+            const afterImg = container.querySelector(".slider-after");
+            const handle = document.getElementById("sliderHandle");
+            const dividerLine = container.querySelector(".divider-line");
+
+            function updateSlider(x) {
+                const rect = container.getBoundingClientRect();
+                let offset = x - rect.left;
+                offset = Math.max(0, Math.min(offset, rect.width));
+                const percent = (offset / rect.width) * 100;
+                afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+                dividerLine.style.left = `${percent}%`;
+            }
+
+            let dragging = false;
+
+            const startDrag = (e) => {
+                dragging = true;
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+                updateSlider(x);
+                e.preventDefault();
+            };
+
+            const stopDrag = () => { dragging = false; };
+            const onDrag = (e) => { 
+                if (!dragging) return; 
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX; 
+                updateSlider(x); 
+            };
+
+            handle.addEventListener("mousedown", startDrag);
+            handle.addEventListener("touchstart", startDrag, { passive: false });
+            window.addEventListener("mousemove", onDrag);
+            window.addEventListener("touchmove", onDrag, { passive: false });
+            window.addEventListener("mouseup", stopDrag);
+            window.addEventListener("touchend", stopDrag);
+
+            // Force true center after layout fully loads
+            const rect = container.getBoundingClientRect();
+            updateSlider(rect.left + rect.width / 2);
         });
     </script>
 </body>
