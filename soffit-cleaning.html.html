@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Soffit & Fascia Cleaning | FAB Window Cleaning Services North Yorkshire</title>
+    <meta name="description" content="Professional soffit and fascia cleaning services in North Yorkshire. Remove moss, algae, and dirt buildup from your home's exterior. Call 07802 494062 for a free quote.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
+            --accent-yellow: #f59e0b;
+            --dark: #1f2937;
+            --gray-dark: #4b5563;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --light: #f9fafb;
+            --white: #ffffff;
+            
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== BASE STYLES ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-lg {
+            padding: 16px 40px;
+            font-size: 1.125rem;
+        }
+
+        /* ===== HEADER ===== */
+        .main-header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .logo-highlight {
+            color: var(--primary-blue);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--gray-dark);
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== SOFFIT HERO ===== */
+        .soffit-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                        url('https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767958996619-RRZXIB7OG1J17HA3KEDS/509422769_122120329586858612_7021221586036772819_n.jpg?format=2500w') center/cover no-repeat;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 60px;
+            color: var(--white);
+        }
+
+        .soffit-hero-content {
+            max-width: 800px;
+        }
+
+        .soffit-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .soffit-hero h1 span {
+            color: #60a5fa;
+        }
+
+        .soffit-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            background: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .benefit-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* ===== PROCESS ===== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        .btn-white:hover {
+            background: var(--gray-light);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--dark);
+            color: var(--gray-light);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE STYLES ===== */
+        @media (max-width: 992px) {
+            .main-nav,
+            .header-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .soffit-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .soffit-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            display: none;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav a {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover,
+        .mobile-nav a.active {
+            background: var(--light);
+            color: var(--primary-blue);
+        }
+
+        .mobile-cta {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;">Skip to main content</a>
+
+    <!-- Header - MATCHES HOME PAGE -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <div class="logo-text">
+                            <span class="logo-highlight">FAB</span> Window Cleaning
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation - MATCHES HOME PAGE -->
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="index.html#testimonials" class="nav-link">Reviews</a>
+                    <a href="index.html#areas" class="nav-link">Areas</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Header CTA - MATCHES HOME PAGE -->
+                <div class="header-cta">
+                    <a href="tel:+447802494062" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>07802 494062</span>
+                    </a>
+                    <a href="index.html#contact" class="btn btn-primary">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu - MATCHES HOME PAGE -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#testimonials">Reviews</a>
+                <a href="index.html#areas">Areas</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="mobile-cta">
+                <a href="tel:+447802494062" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:10px;">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary" style="display:block;text-align:center;">
+                    Get Free Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Soffit Hero -->
+    <section class="soffit-hero" id="main-content">
+        <div class="container">
+            <div class="soffit-hero-content">
+                <h1>Professional <span>Soffit & Fascia Cleaning</span> in North Yorkshire</h1>
+                <p>Restore your home's appearance and protect your property with expert soffit and fascia cleaning services. Remove years of dirt, moss, and algae buildup.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+447802494062" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i> Call for Quote: 07802 494062
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-envelope"></i> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Soffit & Fascia -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What is Soffit & Fascia?</h2>
+                <p class="section-subtitle">Understanding these important parts of your home</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                    <div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 15px;">Soffit</h3>
+                        <p style="color: var(--gray-dark); line-height: 1.8;">
+                            The soffit is the exposed surface underneath the eaves of your roof. It helps ventilate your attic and protects your roof structure from weather damage.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 15px;">Fascia</h3>
+                        <p style="color: var(--gray-dark); line-height: 1.8;">
+                            The fascia is the vertical board that runs along the edge of your roof. It supports the bottom row of tiles and provides a mounting point for gutters.
+                        </p>
+                    </div>
+                </div>
+                <div style="background: var(--light); padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary-blue);">
+                    <p style="color: var(--dark); font-size: 1.125rem; font-style: italic; margin: 0;">
+                        "Andrew cleaned all our UPVC soffits, some of which had never seen water or cloth for years, and did an excellent job at a very affordable price." <br>
+                        <span style="font-weight: 600; display: block; margin-top: 10px;">- Dianne Cleghorn, Easingwold</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="content-section benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Benefits of Professional Soffit Cleaning</h2>
+                <p class="section-subtitle">Why regular soffit and fascia maintenance is important</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Prevent Damage</h3>
+                    <p>Removing moss and algae prevents wood rot and protects your roof structure from water damage.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Improve Curb Appeal</h3>
+                    <p>Clean soffits and fascia dramatically improve your home's appearance and maintain property value.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Prevent Infestations</h3>
+                    <p>Clean surfaces deter birds, insects, and pests from nesting in your eaves and roof spaces.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Maintain Ventilation</h3>
+                    <p>Clear ventilation holes ensure proper airflow in your attic, preventing condensation and mold.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Soffit Cleaning Process</h2>
+                <p class="section-subtitle">A professional approach to restoring your home's exterior</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Inspection</h3>
+                    <p>We assess your soffits and fascia for damage, moss buildup, and specific cleaning requirements.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Gentle Cleaning</h3>
+                    <p>Using professional equipment, we gently remove dirt, algae, and moss without damaging surfaces.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Stubborn Stain Removal</h3>
+                    <p>Special attention given to tough stains and years of buildup using appropriate cleaning solutions.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Final Rinse & Inspection</h3>
+                    <p>Thorough rinse ensures no residue, followed by final inspection to ensure complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose FAB for Soffit Cleaning?</h2>
+                <p class="section-subtitle">Expert service you can trust</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-user-check fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Experienced Professional</h3>
+                        <p style="color: var(--gray);">Andrew has years of experience in soffit and fascia cleaning across North Yorkshire.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-award fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Quality Guaranteed</h3>
+                        <p style="color: var(--gray);">We take pride in our work and guarantee your satisfaction with every job.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-shield-alt fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Fully Insured</h3>
+                        <p style="color: var(--gray);">Comprehensive insurance coverage for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Clean Soffits?</h2>
+                <p>Contact Andrew today for a free, no-obligation soffit cleaning quote. We'll assess your property and provide an accurate estimate.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+447802494062" class="btn btn-white btn-lg">
+                        <i class="fas fa-phone"></i> Call Now: 07802 494062
+                    </a>
+                    <a href="mailto:andrew@fabwindowcleaning.co.uk" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-envelope"></i> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span>FAB Window Cleaning</span>
+                    </div>
+                    <p>
+                        Professional soffit and fascia cleaning services by Andrew Ball. Serving homes across North Yorkshire since 2018.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/FABWINDOWCLEANINGSERVICES" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="tel:+447802494062" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:andrew@fabwindowcleaning.co.uk" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                        <li><a href="index.html#areas">Areas</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
+                        <li><a href="soffit-cleaning.html">Soffit Cleaning</a></li>
+                        <li><a href="index.html#contact">UPVC Cleaning</a></li>
+                        <li><a href="index.html#contact">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+447802494062">07802 494062</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:andrew@fabwindowcleaning.co.uk">andrew@fabwindowcleaning.co.uk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Serving North Yorkshire</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 8am-6pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> FAB Window Cleaning Services. All rights reserved.</p>
+                <div class="footer-links">
+                    <!-- ONLY PRIVACY POLICY LINK REMAINS -->
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            // Animate hamburger to X
+            const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+            if (mobileMenu.classList.contains('active')) {
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
