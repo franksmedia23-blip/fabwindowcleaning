@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutter Cleaning | FAB Window Cleaning Services North Yorkshire</title>
+    <meta name="description" content="Professional gutter cleaning services in North Yorkshire. Prevent water damage, blockages, and structural issues. Call 07802 494062 for gutter maintenance and repair.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
+            --secondary-green: #10b981;
+            --accent-yellow: #f59e0b;
+            --dark: #1f2937;
+            --gray-dark: #4b5563;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --light: #f9fafb;
+            --white: #ffffff;
+            
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== BASE STYLES ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gray-dark);
+            border: 2px solid var(--gray-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gray-light);
+            border-color: var(--gray);
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 1.125rem;
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.875rem;
+        }
+
+        /* ===== HEADER ===== */
+        .main-header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 8px 0;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--gray-dark);
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .menu-bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== GUTTER CLEANING HERO ===== */
+        .gutter-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                        url('https://scontent-lhr8-1.xx.fbcdn.net/v/t51.82787-15/520990784_17852357178494219_6367596380406131474_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pqsDmD33z3MQ7kNvwGnslPX&_nc_oc=Adm0-hQzjjiNw6WNVQiYS2yXQdAsgBQPjmIY2fSE47xem5aCXuhYo8Iy8xN2jRRA10OWqYuTLvpbE9hknmb9IQM0&_nc_zt=23&_nc_ht=scontent-lhr8-1.xx&_nc_gid=iZJ1x4N473vloR13WlGoUw&oh=00_AfoEe6niLXQc1AV62VQGRIpqR0i304bM2gloasc0VFKFXg&oe=6969901C') center/cover no-repeat;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 60px;
+            color: var(--white);
+        }
+
+        .gutter-hero-content {
+            max-width: 800px;
+        }
+
+        .gutter-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .gutter-hero h1 span {
+            color: #60a5fa;
+        }
+
+        .gutter-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== DANGERS SECTION ===== */
+        .dangers {
+            background: #fff5f5;
+        }
+
+        .dangers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .danger-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+            border-left: 4px solid #ef4444;
+        }
+
+        .danger-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .danger-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .danger-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            background: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-green), #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .benefit-icon i {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        /* ===== BEFORE/AFTER SECTION ===== */
+        .before-after {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .image-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            margin: 40px 0;
+            user-select: none;
+        }
+
+        .image-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            border-radius: 15px;
+        }
+
+        .slider-before {
+            z-index: 1;
+        }
+
+        .slider-after {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 6;
+            letter-spacing: 0.5px;
+        }
+
+        .label-after {
+            left: 20px;
+        }
+
+        .label-before {
+            right: 20px;
+        }
+
+        .divider-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: white;
+            z-index: 4;
+            pointer-events: none;
+            transform: translateX(-1px);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border: 2px solid #222;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 7;
+            cursor: ew-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            user-select: none;
+        }
+
+        .slider-handle svg {
+            width: 18px;
+            height: 18px;
+            fill: #222;
+        }
+
+        .slider-handle .arrow-left {
+            transform: translateX(-3px);
+        }
+
+        .slider-handle .arrow-right {
+            transform: translateX(3px);
+        }
+
+        /* ===== PROCESS ===== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        /* ===== AREAS SECTION ===== */
+        .areas {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        .btn-white:hover {
+            background: var(--gray-light);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* ===== COST SAVINGS CALCULATOR ===== */
+        .calculator {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .calculator-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .calculator-step {
+            margin-bottom: 30px;
+        }
+
+        .calculator-step label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .property-select {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .property-option {
+            padding: 20px;
+            border: 2px solid var(--gray-light);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .property-option:hover {
+            border-color: var(--primary-light);
+            background: var(--light);
+        }
+
+        .property-option.selected {
+            border-color: var(--primary-blue);
+            background: var(--light);
+        }
+
+        .calculator-result {
+            background: linear-gradient(135deg, var(--secondary-green), #059669);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .savings-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--dark);
+            color: var(--gray-light);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE STYLES ===== */
+        @media (max-width: 992px) {
+            .main-nav,
+            .header-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .gutter-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .logo-img {
+                height: 70px;
+            }
+
+            .property-select {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gutter-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-img {
+                height: 60px;
+            }
+
+            .property-select {
+                grid-template-columns: 1fr;
+            }
+
+            .savings-amount {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
+            }
+
+            .savings-amount {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            display: none;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav a {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav a:hover,
+        .mobile-nav a.active {
+            background: var(--light);
+            color: var(--primary-blue);
+        }
+
+        .mobile-cta {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo with Image Only -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767959000146-M6J87VNO81PGYWQBIFDL/Screenshot_2025-08-12_135134-removebg-preview.png?format=1500w" 
+                             alt="FAB Window Cleaning - Professional Gutter Cleaning Services in North Yorkshire" 
+                             class="logo-img"
+                             title="FAB Window Cleaning">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="window-cleaning.html" class="nav-link">Window Cleaning</a>
+                    <a href="gutter-cleaning.html" class="nav-link active">Gutter Cleaning</a>
+                    <a href="soffit-cleaning.html" class="nav-link">Soffit Cleaning</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="header-cta">
+                    <a href="tel:+447802494062" class="phone-link">
+                        <i class="fas fa-phone"></i>
+                        <span>07802 494062</span>
+                    </a>
+                    <a href="#contact" class="btn btn-primary">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="window-cleaning.html">Window Cleaning</a>
+                <a href="gutter-cleaning.html" class="active">Gutter Cleaning</a>
+                <a href="soffit-cleaning.html">Soffit Cleaning</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="mobile-cta">
+                <a href="tel:+447802494062" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:10px;">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#contact" class="btn btn-secondary" style="display:block;text-align:center;">
+                    Get Free Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gutter Cleaning Hero -->
+    <section class="gutter-hero">
+        <div class="container">
+            <div class="gutter-hero-content">
+                <h1>Professional <span>Gutter Cleaning</span> in North Yorkshire</h1>
+                <p>Protect your home from water damage with our expert gutter cleaning service. We remove leaves, debris, and blockages to keep your gutters flowing freely all year round.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+447802494062" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone"></i> Call for Quote: 07802 494062
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-envelope"></i> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dangers of Clogged Gutters -->
+    <section class="content-section dangers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dangers of Clogged Gutters</h2>
+                <p class="section-subtitle">Don't let blocked gutters put your property at risk</p>
+            </div>
+            <div class="dangers-grid">
+                <div class="danger-card">
+                    <div class="danger-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Structural Damage</h3>
+                    <p>Overflowing water can damage brickwork, foundations, and structural timber, leading to costly repairs.</p>
+                </div>
+                <div class="danger-card">
+                    <div class="danger-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Damage</h3>
+                    <p>Blocked gutters cause water to overflow into walls, ceilings, and basements, creating damp and mould issues.</p>
+                </div>
+                <div class="danger-card">
+                    <div class="danger-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Pest Infestations</h3>
+                    <p>Stagnant water and debris attract insects, rodents, and birds looking for nesting sites in your gutters.</p>
+                </div>
+                <div class="danger-card">
+                    <div class="danger-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Winter Damage</h3>
+                    <p>Frozen gutters can become heavy with ice, pulling away from the roof and causing significant damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits of Professional Gutter Cleaning -->
+    <section class="content-section benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Benefits of Professional Gutter Cleaning</h2>
+                <p class="section-subtitle">Protect your biggest investment - your home</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Property Protection</h3>
+                    <p>Prevent costly water damage to your roof, walls, and foundations with regularly cleaned gutters.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Debris Removal</h3>
+                    <p>We remove all leaves, moss, and debris, clearing downpipes and ensuring proper water flow.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Early Problem Detection</h3>
+                    <p>During cleaning, we identify issues like cracks, rust, or loose fittings before they become major problems.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Expert Equipment</h3>
+                    <p>We use professional-grade equipment including gutter vacuums, cameras, and high-reach tools for safe, thorough cleaning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See the Results</h2>
+                <p class="section-subtitle">Professional gutter cleaning makes a dramatic difference to your property's appearance and protection</p>
+            </div>
+
+            <div class="image-slider" id="slider">
+                <img class="slider-before"
+                    src="https://scontent-lhr8-1.xx.fbcdn.net/v/t51.75761-15/500717518_17843942868494219_7811708397920927396_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tO0V5EWhqWoQ7kNvwHFxe85&_nc_oc=Adn2kk7jiWQ4iHWKt1HVi0NtiIev30uPJ0b1irYdsTbq1tSBH4i4Vv-PW-75TomwjBCJp0S2hk3SYaXBw1tZwEDv&_nc_zt=23&_nc_ht=scontent-lhr8-1.xx&_nc_gid=a5PIq07-QU63AEKObIXhfw&oh=00_AfrNdMeuDSmxdh9l3FenIUTn_3zh5k1P_nCR_TxJJBHqFQ&oe=69686B0B"
+                    alt="Before gutter cleaning">
+                <img class="slider-after"
+                    src="https://scontent-lhr6-1.xx.fbcdn.net/v/t51.75761-15/500915604_17843942886494219_5487333137843445727_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xxFizL3GbFkQ7kNvwHxdaJb&_nc_oc=AdmVHwOFLf3jd2M5SU_LIWsCwh4o_7jjYKeuugRu6VEXHOtc5UAfK82Ww97bXFZxqGvkAb63Dd-4utX0G8Jz8dCr&_nc_zt=23&_nc_ht=scontent-lhr6-1.xx&_nc_gid=H8wkLXG9I0Cm_W6tgNVN8A&oh=00_AfqjxELtv1cbBrfBbmy79DJI2W4XqN3llUingAXAoPJ-1A&oe=69687FA2"
+                    alt="After gutter cleaning">
+
+                <div class="slider-label label-before">Before</div>
+                <div class="slider-label label-after">After</div>
+
+                <div class="divider-line"></div>
+
+                <div class="slider-handle" id="sliderHandle">
+                    <svg class="arrow-left" viewBox="0 0 24 24">
+                        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                    <svg class="arrow-right" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Gutter Cleaning Process -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Gutter Cleaning Process</h2>
+                <p class="section-subtitle">Thorough, safe, and professional service every time</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Safety Assessment</h3>
+                    <p>We conduct a thorough risk assessment and set up proper safety equipment before beginning any work.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Debris Removal</h3>
+                    <p>All leaves, moss, and blockages are carefully removed from gutters and downpipes.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>High-Pressure Flush</h3>
+                    <p>Gutters are flushed with high-pressure water to clear remaining debris and test water flow.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Final Inspection</h3>
+                    <p>We conduct a final inspection to ensure all gutters are clean, flowing correctly, and free from damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Savings Calculator -->
+    <section class="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculate Your Potential Savings</h2>
+                <p class="section-subtitle">See how much you could save by preventing gutter-related damage</p>
+            </div>
+            <div class="calculator-card">
+                <div class="calculator-step">
+                    <label>Select your property type:</label>
+                    <div class="property-select">
+                        <div class="property-option" data-value="bungalow">
+                            <i class="fas fa-home fa-2x" style="color: var(--primary-blue); margin-bottom: 10px;"></i>
+                            <div>Bungalow</div>
+                        </div>
+                        <div class="property-option" data-value="semi">
+                            <i class="fas fa-home fa-2x" style="color: var(--primary-blue); margin-bottom: 10px;"></i>
+                            <div>Semi-Detached</div>
+                        </div>
+                        <div class="property-option" data-value="detached">
+                            <i class="fas fa-home fa-2x" style="color: var(--primary-blue); margin-bottom: 10px;"></i>
+                            <div>Detached</div>
+                        </div>
+                        <div class="property-option" data-value="commercial">
+                            <i class="fas fa-building fa-2x" style="color: var(--primary-blue); margin-bottom: 10px;"></i>
+                            <div>Commercial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Potential Damage Prevention</h3>
+                    <div class="savings-amount">£1,500 - £3,000</div>
+                    <p>Regular gutter cleaning could save you from water damage repairs on a typical semi-detached house</p>
+                    <a href="#contact" class="btn btn-white" style="margin-top: 20px;">
+                        <i class="fas fa-pound-sign"></i> Get Exact Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="content-section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose FAB for Gutter Cleaning?</h2>
+                <p class="section-subtitle">Professional service you can trust</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-safety-belt fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Fully Insured</h3>
+                        <p style="color: var(--gray);">Comprehensive insurance coverage for your complete peace of mind during all gutter work.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-tools fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Professional Equipment</h3>
+                        <p style="color: var(--gray);">We use industrial-grade gutter vacuums and high-reach equipment for safe, thorough cleaning.</p>
+                    </div>
+                    <div style="text-align: center; padding: 30px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-light), var(--primary-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                            <i class="fas fa-check-circle fa-2x" style="color: var(--white);"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px;">Quality Guaranteed</h3>
+                        <p style="color: var(--gray);">We guarantee all our work and provide follow-up checks to ensure your gutters remain problem-free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section class="areas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Areas We Serve</h2>
+                <p class="section-subtitle">Professional gutter cleaning services across North Yorkshire</p>
+            </div>
+
+            <div class="areas-list">
+                <div class="area-item">Thirsk</div>
+                <div class="area-item">Northallerton</div>
+                <div class="area-item">York</div>
+                <div class="area-item">Harrogate</div>
+                <div class="area-item">Easingwold</div>
+                <div class="area-item">Boroughbridge</div>
+                <div class="area-item">Ripon</div>
+                <div class="area-item">Knaresborough</div>
+            </div>
+
+            <div style="text-align: center;">
+                <p style="margin-bottom: 20px; color: var(--gray-dark);">
+                    Plus all surrounding villages and towns
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Check Your Area
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Protect Your Home Today</h2>
+                <p>Contact Andrew today for a free gutter cleaning quote. Prevent costly water damage and keep your property safe year-round.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+447802494062" class="btn btn-white btn-lg">
+                        <i class="fas fa-phone"></i> Call Now: 07802 494062
+                    </a>
+                    <a href="mailto:andrew@fabwindowcleaning.co.uk" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-envelope"></i> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span>FAB Window Cleaning</span>
+                    </div>
+                    <p>
+                        Professional gutter cleaning services by Andrew Ball. Protecting homes across North Yorkshire since 2018.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/FABWINDOWCLEANINGSERVICES" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="tel:+447802494062" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:andrew@fabwindowcleaning.co.uk" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                        <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
+                        <li><a href="soffit-cleaning.html">Soffit Cleaning</a></li>
+                        <li><a href="#contact">Fascia Cleaning</a></li>
+                        <li><a href="#contact">Downpipe Clearing</a></li>
+                        <li><a href="#contact">Gutter Repairs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Areas -->
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Thirsk & Villages</li>
+                        <li>Northallerton</li>
+                        <li>York</li>
+                        <li>Harrogate</li>
+                        <li>Easingwold</li>
+                        <li>Surrounding Areas</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+447802494062">07802 494062</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:andrew@fabwindowcleaning.co.uk">andrew@fabwindowcleaning.co.uk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Serving North Yorkshire</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Sat: 8am-6pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> FAB Window Cleaning Services. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            // Animate hamburger to X
+            const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+            if (mobileMenu.classList.contains('active')) {
+                bars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const bars = mobileMenuBtn.querySelectorAll('.menu-bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Before/After Slider Script
+        window.addEventListener("load", function () {
+            const container = document.getElementById("slider");
+            const afterImg = container.querySelector(".slider-after");
+            const handle = document.getElementById("sliderHandle");
+            const dividerLine = container.querySelector(".divider-line");
+
+            function updateSlider(x) {
+                const rect = container.getBoundingClientRect();
+                let offset = x - rect.left;
+                offset = Math.max(0, Math.min(offset, rect.width));
+                const percent = (offset / rect.width) * 100;
+                afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                handle.style.left = `${percent}%`;
+                dividerLine.style.left = `${percent}%`;
+            }
+
+            let dragging = false;
+
+            const startDrag = (e) => {
+                dragging = true;
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+                updateSlider(x);
+                e.preventDefault();
+            };
+
+            const stopDrag = () => { dragging = false; };
+            const onDrag = (e) => { 
+                if (!dragging) return; 
+                const x = e.type.includes("touch") ? e.touches[0].clientX : e.clientX; 
+                updateSlider(x); 
+            };
+
+            handle.addEventListener("mousedown", startDrag);
+            handle.addEventListener("touchstart", startDrag, { passive: false });
+            window.addEventListener("mousemove", onDrag);
+            window.addEventListener("touchmove", onDrag, { passive: false });
+            window.addEventListener("mouseup", stopDrag);
+            window.addEventListener("touchend", stopDrag);
+
+            // Force true center after layout fully loads
+            const rect = container.getBoundingClientRect();
+            updateSlider(rect.left + rect.width / 2);
+        });
+
+        // Cost Calculator Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const propertyOptions = document.querySelectorAll('.property-option');
+            const calculatorResult = document.getElementById('calculatorResult');
+            const savingsAmount = calculatorResult.querySelector('.savings-amount');
+            
+            const savingsData = {
+                bungalow: '£800 - £1,500',
+                semi: '£1,500 - £3,000',
+                detached: '£2,000 - £4,000',
+                commercial: '£3,000 - £8,000'
+            };
+            
+            propertyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    propertyOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Update savings amount
+                    const propertyType = this.getAttribute('data-value');
+                    savingsAmount.textContent = savingsData[propertyType] || '£1,500 - £3,000';
+                });
+            });
+            
+            // Auto-select semi-detached by default
+            const defaultOption = document.querySelector('.property-option[data-value="semi"]');
+            if (defaultOption) {
+                defaultOption.classList.add('selected');
+            }
+        });
+    </script>
+</body>
+</html>
