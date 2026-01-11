@@ -25,6 +25,7 @@
             --primary-blue: #3b82f6;
             --primary-dark: #1d4ed8;
             --primary-light: #60a5fa;
+            --secondary-green: #10b981;
             --accent-yellow: #f59e0b;
             --dark: #1f2937;
             --gray-dark: #4b5563;
@@ -86,7 +87,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 32px;
+            padding: 12px 24px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
@@ -120,9 +121,25 @@
             color: var(--white);
         }
 
+        .btn-outline {
+            background: transparent;
+            color: var(--gray-dark);
+            border: 2px solid var(--gray-light);
+        }
+
+        .btn-outline:hover {
+            background: var(--gray-light);
+            border-color: var(--gray);
+        }
+
         .btn-lg {
-            padding: 16px 40px;
+            padding: 16px 32px;
             font-size: 1.125rem;
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 0.875rem;
         }
 
         /* ===== HEADER ===== */
@@ -134,7 +151,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 16px 0;
+            padding: 8px 0;
         }
 
         .header-wrapper {
@@ -146,18 +163,12 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
         }
 
-        .logo-text {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        .logo-highlight {
-            color: var(--primary-blue);
+        .logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
         }
 
         .main-nav {
@@ -354,6 +365,36 @@
             margin: 0 auto 20px;
         }
 
+        /* ===== AREAS SECTION ===== */
+        .areas {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-light);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-light);
+        }
+
         /* ===== CTA SECTION ===== */
         .cta-section {
             padding: 100px 0;
@@ -534,6 +575,10 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .logo-img {
+                height: 70px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -551,6 +596,16 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .logo-img {
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 50px;
             }
         }
 
@@ -603,35 +658,36 @@
     <!-- Skip to content -->
     <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;">Skip to main content</a>
 
-    <!-- Header - MATCHES HOME PAGE -->
+    <!-- Header - MATCHES GUTTER CLEANING PAGE -->
     <header class="main-header">
         <div class="container">
             <div class="header-wrapper">
-                <!-- Logo -->
+                <!-- Logo with Image Only -->
                 <div class="logo">
-                    <a href="index.html" style="text-decoration: none; color: inherit;">
-                        <div class="logo-text">
-                            <span class="logo-highlight">FAB</span> Window Cleaning
-                        </div>
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6960e9d0f0f61a3bd50e138f/1767959000146-M6J87VNO81PGYWQBIFDL/Screenshot_2025-08-12_135134-removebg-preview.png?format=1500w" 
+                             alt="FAB Window Cleaning - Professional Soffit & Fascia Cleaning Services in North Yorkshire" 
+                             class="logo-img"
+                             title="FAB Window Cleaning">
                     </a>
                 </div>
 
-                <!-- Desktop Navigation - MATCHES HOME PAGE -->
+                <!-- Desktop Navigation -->
                 <nav class="main-nav">
                     <a href="index.html" class="nav-link">Home</a>
-                    <a href="index.html#services" class="nav-link">Services</a>
-                    <a href="index.html#testimonials" class="nav-link">Reviews</a>
-                    <a href="index.html#areas" class="nav-link">Areas</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="window-cleaning.html" class="nav-link">Window Cleaning</a>
+                    <a href="gutter-cleaning.html" class="nav-link">Gutter Cleaning</a>
+                    <a href="soffit-cleaning.html" class="nav-link active">Soffit Cleaning</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </nav>
 
-                <!-- Header CTA - MATCHES HOME PAGE -->
+                <!-- Header CTA -->
                 <div class="header-cta">
                     <a href="tel:+447802494062" class="phone-link">
                         <i class="fas fa-phone"></i>
                         <span>07802 494062</span>
                     </a>
-                    <a href="index.html#contact" class="btn btn-primary">Get Quote</a>
+                    <a href="#contact" class="btn btn-primary">Get Quote</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -643,20 +699,20 @@
             </div>
         </div>
 
-        <!-- Mobile Menu - MATCHES HOME PAGE -->
+        <!-- Mobile Menu -->
         <div class="mobile-menu">
             <nav class="mobile-nav">
                 <a href="index.html">Home</a>
-                <a href="index.html#services">Services</a>
-                <a href="index.html#testimonials">Reviews</a>
-                <a href="index.html#areas">Areas</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="window-cleaning.html">Window Cleaning</a>
+                <a href="gutter-cleaning.html">Gutter Cleaning</a>
+                <a href="soffit-cleaning.html" class="active">Soffit Cleaning</a>
+                <a href="#contact">Contact</a>
             </nav>
             <div class="mobile-cta">
                 <a href="tel:+447802494062" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:10px;">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
-                <a href="index.html#contact" class="btn btn-secondary" style="display:block;text-align:center;">
+                <a href="#contact" class="btn btn-secondary" style="display:block;text-align:center;">
                     Get Free Quote
                 </a>
             </div>
@@ -820,6 +876,36 @@
         </div>
     </section>
 
+    <!-- Areas Section -->
+    <section class="areas">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Areas We Serve</h2>
+                <p class="section-subtitle">Professional soffit cleaning services across North Yorkshire</p>
+            </div>
+
+            <div class="areas-list">
+                <div class="area-item">Thirsk</div>
+                <div class="area-item">Northallerton</div>
+                <div class="area-item">York</div>
+                <div class="area-item">Harrogate</div>
+                <div class="area-item">Easingwold</div>
+                <div class="area-item">Boroughbridge</div>
+                <div class="area-item">Ripon</div>
+                <div class="area-item">Knaresborough</div>
+            </div>
+
+            <div style="text-align: center;">
+                <p style="margin-bottom: 20px; color: var(--gray-dark);">
+                    Plus all surrounding villages and towns
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Check Your Area
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact CTA -->
     <section class="cta-section" id="contact">
         <div class="container">
@@ -863,27 +949,29 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                        <li><a href="index.html#areas">Areas</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-
                 <!-- Services -->
                 <div class="footer-column">
-                    <h3>Services</h3>
+                    <h3>Our Services</h3>
                     <ul>
                         <li><a href="window-cleaning.html">Window Cleaning</a></li>
                         <li><a href="gutter-cleaning.html">Gutter Cleaning</a></li>
                         <li><a href="soffit-cleaning.html">Soffit Cleaning</a></li>
-                        <li><a href="index.html#contact">UPVC Cleaning</a></li>
-                        <li><a href="index.html#contact">Commercial Cleaning</a></li>
+                        <li><a href="#contact">Fascia Cleaning</a></li>
+                        <li><a href="#contact">UPVC Cleaning</a></li>
+                        <li><a href="#contact">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Areas -->
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Thirsk & Villages</li>
+                        <li>Northallerton</li>
+                        <li>York</li>
+                        <li>Harrogate</li>
+                        <li>Easingwold</li>
+                        <li>Surrounding Areas</li>
                     </ul>
                 </div>
 
@@ -914,8 +1002,8 @@
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> FAB Window Cleaning Services. All rights reserved.</p>
                 <div class="footer-links">
-                    <!-- ONLY PRIVACY POLICY LINK REMAINS -->
-                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
                 </div>
             </div>
         </div>
