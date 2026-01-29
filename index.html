@@ -47,6 +47,7 @@
             --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
             --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
             --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+            --header-height: 92px;
         }
 
         /* ===== BASE STYLES ===== */
@@ -60,6 +61,7 @@
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--white);
+            text-rendering: optimizeLegibility;
         }
 
         .container {
@@ -103,6 +105,16 @@
             font-size: 1rem;
             gap: 8px;
             text-align: center;
+        }
+
+        .btn:focus-visible,
+        .nav-link:focus-visible,
+        .phone-link:focus-visible,
+        .mobile-menu-btn:focus-visible,
+        .footer-column a:focus-visible {
+            outline: 3px solid rgba(59, 130, 246, 0.45);
+            outline-offset: 3px;
+            border-radius: 8px;
         }
 
         .btn-primary {
@@ -158,6 +170,13 @@
             right: 0;
             z-index: 1000;
             padding: 8px 0;
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-lg);
         }
 
         .header-wrapper {
@@ -225,6 +244,14 @@
             color: var(--gray-dark);
             text-decoration: none;
             font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        .phone-link:hover {
+            color: var(--primary-dark);
+            background: rgba(59, 130, 246, 0.16);
         }
 
         .mobile-menu-btn {
@@ -251,12 +278,12 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 160px 0 80px; /* INCREASED TOP PADDING */
+            padding: calc(var(--header-height) + 80px) 0 90px;
             color: var(--white);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 820px;
         }
 
         .hero-title {
@@ -302,6 +329,35 @@
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .hero-stat {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-stat i {
+            font-size: 1.2rem;
+            color: var(--accent-yellow);
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 1.1rem;
         }
 
         /* ===== SERVICES SECTION ===== */
@@ -342,11 +398,29 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-green));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-xl);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
         }
 
         .service-icon {
@@ -513,6 +587,12 @@
             border-radius: 12px;
             box-shadow: var(--shadow-md);
             border: 1px solid var(--gray-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
         }
 
         .testimonial-header {
@@ -578,12 +658,15 @@
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--gray-light);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .area-item:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
             border-color: var(--primary-light);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.08));
         }
 
         /* ===== CTA SECTION WITH FORM ===== */
@@ -688,6 +771,7 @@
             font-weight: 700;
             padding: 16px 40px;
             min-width: 220px;
+            box-shadow: var(--shadow-md);
         }
 
         .btn-white:hover {
@@ -919,7 +1003,7 @@
         /* ===== MOBILE MENU ===== */
         .mobile-menu {
             position: fixed;
-            top: 70px;
+            top: var(--header-height);
             left: 0;
             right: 0;
             background: var(--white);
@@ -959,12 +1043,28 @@
             padding-top: 20px;
             border-top: 1px solid var(--gray-light);
         }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 16px;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 10px 16px;
+            border-radius: 999px;
+            text-decoration: none;
+            z-index: 1200;
+        }
+
+        .skip-link:focus {
+            left: 20px;
+        }
     </style>
 </head>
 <body>
 
     <!-- Skip to content -->
-    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
     <header class="main-header">
@@ -1027,6 +1127,7 @@
         </div>
     </header>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -1061,6 +1162,30 @@
                     <a href="tel:+447802494062" class="btn btn-secondary btn-lg">
                         <i class="fas fa-phone"></i> Call Andrew: 07802 494062
                     </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>100% Recommended</strong>
+                            <span>Trusted by local homeowners</span>
+                        </div>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>24 Hour Response</strong>
+                            <span>Fast quotes &amp; scheduling</span>
+                        </div>
+                    </div>
+                    <div class="hero-stat">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <strong>North Yorkshire</strong>
+                            <span>Covering homes &amp; businesses</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1380,6 +1505,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
@@ -1464,6 +1590,7 @@
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
+        const mainHeader = document.querySelector('.main-header');
 
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
@@ -1477,6 +1604,15 @@
                 bars[0].style.transform = 'none';
                 bars[1].style.opacity = '1';
                 bars[2].style.transform = 'none';
+            }
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
             }
         });
 
